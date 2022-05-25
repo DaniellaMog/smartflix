@@ -1,16 +1,13 @@
-%div{:class => "container row"}
-  %div{:class => "col-sm-12"}
-    %h1{:class => "display-4"} Smartflix
-    %p{:class => "lead"} Find out more about your favourite movies.
-  %div{:class => "container row"}
+.container.row
+  .col-sm-12
+    %h1.display-4 Smartflix
+    %p.display.lead Find out more about your favourite movies.
+  .container.row
     - @shows.each do |show|
-      %div{:class => "col-sm-3 d-flex align-items-stretch mb-4"}
-        %div{:class => "card"}
-          %img{:class => "card-img-top", :alt => "placeholder", :src => "https://via.placeholder.com/150"}
-            %div{:class => "card-body"}
-              %h5{:class => "card-title"}= "#{show['title']} (#{show['release_year']})"
-              %p{:class => "card-text"}= show['type']
-              %p{:class => "card-text"}= show['description']
-
-
-
+      .col-sm-3.d-flex.align-items-stretch.mb-4
+        .card
+          %img.card-img-top{:alt => "placeholder", :src => "https://via.placeholder.com/150"}
+            .card-body
+              %h5.card-title= "#{show['title']} (#{show['release_year']})"
+              %p.card-text= show['type']
+              %p.card-text= show['description']

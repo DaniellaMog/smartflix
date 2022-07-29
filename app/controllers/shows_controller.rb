@@ -3,6 +3,7 @@ class ShowsController < ApplicationController
   include ShowsHelper
 
   def index
-    @shows = get_csv_data.take(20)
+    @shows = Show.all.take(20)
   end
 end
+
